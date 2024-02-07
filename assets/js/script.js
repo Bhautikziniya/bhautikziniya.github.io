@@ -134,6 +134,14 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  sendEmail();
+
+  form.reset();
+  return false;
+});
 
 
 // page navigation variables
@@ -158,14 +166,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// const downloadResumeBtn = document.querySelector("[download]");
-
-// downloadResumeBtn.addEventListener("click", function (e) {
-//   // e.preventDefault();
-// // window.location.href = "./assets/resume/Bhautik_Ziniya_Resume-Senior_Software_Engineer.pdf";
-// window.open("./assets/resume/Bhautik_Ziniya_Resume-Senior_Software_Engineer.pdf", "_blank");
-// });
-
 function downloadResume() {
   // var fileToDownload = "./assets/resume/Bhautik_Ziniya_Resume-Senior_Software_Engineer.pdf";
   var hiddenElement = document.createElement('a');
@@ -173,4 +173,33 @@ function downloadResume() {
   hiddenElement.target = '_blank';
   hiddenElement.download = 'Bhautik_Ziniya_Senior_Software_Engineer.pdf';
   hiddenElement.click();
+}
+
+function sendEmail() {
+  const fullName = document.getElementById("fullname").value;
+  const message = document.getElementById("message").value;
+  const email = document.getElementById('email').value;
+  
+  const bodyMessage = `Name: ${fullName}
+                      <br>Email: ${email}
+                      <br>Phone Number: ${fullName}
+                      <br>Message: ${message}`; 
+
+  Email.send({
+      SecureToken : "799efb2e-0bcd-412c-a0a5-50694f83f452",
+      To : 'ziniyabhautik@gmail.com',
+      From : "ziniyabhautik@gmail.com",
+      Subject : "New Inquiry from " + document.getElementById("fullname").value,
+      Body : bodyMessage
+  }).then(
+    message => {
+      if (message == "OK") {
+        Swal.fire({
+          title: "Success!",
+          text: "Message sent successfully!",
+          icon: "success"
+        });
+      }
+    }
+  );
 }

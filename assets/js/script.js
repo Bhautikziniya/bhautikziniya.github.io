@@ -203,3 +203,11 @@ function sendEmail() {
     }
   );
 }
+
+// https://www.colors.tools/lighten-and-darken/?currentColor=1f1f1f&currentColorMixed=4220c6&currentSteps=10&currentHarmony=180&currentHarmonyDominance=50,50,50,50
+// https://mdigi.tools/lighten-color/#1f1f1f
+// https://mdigi.tools/color-shades/#fafafa
+// https://www.notionavenue.co/colorpicker
+function changeTheme() {
+  document.body.classList.toggle("dark-theme");
+}

@@ -169,7 +169,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
 function downloadResume() {
   // var fileToDownload = "./assets/resume/Bhautik_Ziniya_Resume-Senior_Software_Engineer.pdf";
   var hiddenElement = document.createElement('a');
-  hiddenElement.href = './assets/resume/Bhautik_Ziniya_Resume-Senior_Software_Engineer.pdf'
+  // hiddenElement.href = './assets/resume/Bhautik_Ziniya_Resume-Senior_Software_Engineer.pdf'
+  hiddenElement.href = './assets/resume/Bhautik_Ziniya_Senior_Software_Engineer.pdf'
   hiddenElement.target = '_blank';
   hiddenElement.download = 'Bhautik_Ziniya_Senior_Software_Engineer.pdf';
   hiddenElement.click();

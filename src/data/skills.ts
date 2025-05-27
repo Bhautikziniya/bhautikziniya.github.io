@@ -14,7 +14,6 @@ export const skillsData: SkillCategory[] = [
       "SwiftUI",
       "Python",
       "TypeScript",
-      "JavaScript",
       "HTML/CSS"
     ]
   },
@@ -30,8 +29,8 @@ export const skillsData: SkillCategory[] = [
       "Firebase",
       "Core Location",
       "MapKit",
-      "Core ML",
-      "Vision"
+      "Vision",
+      "Firebase TensorFlow"
     ]
   },
   {
@@ -45,7 +44,8 @@ export const skillsData: SkillCategory[] = [
       "Figma",
       "Agile/Scrum",
       "App Store Connect",
-      "CocoaPods"
+      "CocoaPods",
+      "Swift Package Manager"
     ]
   }
 ];

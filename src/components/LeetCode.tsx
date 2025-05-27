@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Code, Trophy, Target, Clock } from 'lucide-react';
+import CountUp from 'react-countup';
 import { fetchLeetCodeStats, LeetCodeStats } from '../utils/leetcode';
 
 const LEETCODE_USERNAME = 'HtiGuleZ1S'; // Replace with your LeetCode username
@@ -88,7 +89,7 @@ const LeetCode = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Total Solved */}
-            <div className="bg-white rounded-lg p-6 shadow-md dark:bg-gray-900">
+            <div className="bg-white rounded-lg p-6 shadow-md dark:bg-gray-900 transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
               <div className="flex items-center mb-4">
                 <Code className="w-6 h-6 text-blue-600 mr-3 dark:text-blue-400" />
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -96,12 +97,17 @@ const LeetCode = () => {
                 </h3>
               </div>
               <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">
-                {stats.totalSolved}
+                <CountUp
+                  end={stats.totalSolved}
+                  duration={2.5}
+                  enableScrollSpy
+                  scrollSpyOnce
+                />
               </p>
             </div>
 
             {/* Difficulty Distribution */}
-            <div className="bg-white rounded-lg p-6 shadow-md dark:bg-gray-900">
+            <div className="bg-white rounded-lg p-6 shadow-md dark:bg-gray-900 transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
               <div className="flex items-center mb-4">
                 <Target className="w-6 h-6 text-green-600 mr-3 dark:text-green-400" />
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -111,21 +117,42 @@ const LeetCode = () => {
               <div className="space-y-2">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 dark:text-gray-400">Easy</span>
-                  <span className="font-semibold text-green-600 dark:text-green-400">{stats.easySolved}</span>
+                  <span className="font-semibold text-green-600 dark:text-green-400">
+                    <CountUp
+                      end={stats.easySolved}
+                      duration={2.5}
+                      enableScrollSpy
+                      scrollSpyOnce
+                    />
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 dark:text-gray-400">Medium</span>
-                  <span className="font-semibold text-yellow-600 dark:text-yellow-400">{stats.mediumSolved}</span>
+                  <span className="font-semibold text-yellow-600 dark:text-yellow-400">
+                    <CountUp
+                      end={stats.mediumSolved}
+                      duration={2.5}
+                      enableScrollSpy
+                      scrollSpyOnce
+                    />
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 dark:text-gray-400">Hard</span>
-                  <span className="font-semibold text-red-600 dark:text-red-400">{stats.hardSolved}</span>
+                  <span className="font-semibold text-red-600 dark:text-red-400">
+                    <CountUp
+                      end={stats.hardSolved}
+                      duration={2.5}
+                      enableScrollSpy
+                      scrollSpyOnce
+                    />
+                  </span>
                 </div>
               </div>
             </div>
 
             {/* Ranking */}
-            <div className="bg-white rounded-lg p-6 shadow-md dark:bg-gray-900">
+            <div className="bg-white rounded-lg p-6 shadow-md dark:bg-gray-900 transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
               <div className="flex items-center mb-4">
                 <Trophy className="w-6 h-6 text-yellow-600 mr-3 dark:text-yellow-400" />
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -133,12 +160,18 @@ const LeetCode = () => {
                 </h3>
               </div>
               <p className="text-3xl font-bold text-yellow-600 dark:text-yellow-400">
-                #{stats.ranking.toLocaleString()}
+                #<CountUp
+                  end={stats.ranking}
+                  duration={2.5}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  separator=","
+                />
               </p>
             </div>
 
             {/* Acceptance Rate */}
-            <div className="bg-white rounded-lg p-6 shadow-md dark:bg-gray-900">
+            <div className="bg-white rounded-lg p-6 shadow-md dark:bg-gray-900 transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
               <div className="flex items-center mb-4">
                 <Clock className="w-6 h-6 text-purple-600 mr-3 dark:text-purple-400" />
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -146,7 +179,14 @@ const LeetCode = () => {
                 </h3>
               </div>
               <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">
-                {stats.acceptanceRate}%
+                <CountUp
+                  end={stats.acceptanceRate}
+                  duration={2.5}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  decimals={1}
+                  suffix="%"
+                />
               </p>
             </div>
           </div>

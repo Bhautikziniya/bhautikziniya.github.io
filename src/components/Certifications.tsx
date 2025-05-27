@@ -102,15 +102,17 @@ const Certifications = () => {
                       ))}
                     </div>
                     {cert.certificateUrl && (
-                      <div className="flex items-end justify-between mt-3">
+                      <div className="flex items-end justify-between mt-6">
                         <a
                           href={cert.certificateUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                          className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors duration-300"
                         >
-                          <ExternalLink className="w-4 h-4 mr-2" />
                           View Certificate
+                          <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
                         </a>
                         {cert.title === "Scrum Foundation Professional Certificate - SFPC™" && (
                           <img

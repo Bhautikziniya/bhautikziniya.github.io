@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronRight } from 'lucide-react';
+import bhautikImage from '../assets/bhautik.jpg';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,7 +42,7 @@ const About = () => {
               <div className="w-full md:w-1/3">
                 <div className="relative rounded-full overflow-hidden aspect-square shadow-xl">
                   <img
-                    src="/bhautik.jpg"
+                    src={bhautikImage}
                     alt="Bhautik Ziniya"
                     className="w-full h-full object-cover"
                   />

@@ -1,5 +1,6 @@
 import { ArrowDownCircle } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import resume from '../assets/Bhautik-SeniorSoftwareEngineer.pdf';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -68,7 +69,7 @@ const Hero = () => {
               View Projects
             </a> */}
             <a
-              href="/Bhautik-SeniorSoftwareEngineer.pdf"
+              href={resume}
               download
               className="px-6 py-3 bg-white text-blue-600 font-medium rounded-lg border border-blue-600 hover:bg-blue-50 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-400 dark:hover:bg-gray-700"
             >

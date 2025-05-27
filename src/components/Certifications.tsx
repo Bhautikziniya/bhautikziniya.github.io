@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Award, ExternalLink } from 'lucide-react';
+import badge from '../assets/certiprof-scrum-foundation-badge.png';
 
 interface Certification {
   title: string;
@@ -116,7 +117,7 @@ const Certifications = () => {
                         </a>
                         {cert.title === "Scrum Foundation Professional Certificate - SFPC™" && (
                           <img
-                            src="/certiprof-scrum-foundation-badge.png"
+                            src={badge}
                             alt="CertiProf Scrum Foundation Certification Badge"
                             width={100}
                             height={100}

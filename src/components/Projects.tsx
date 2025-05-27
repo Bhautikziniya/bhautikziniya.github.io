@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Globe } from 'lucide-react';
 import { projects } from '../data/projects';
 
 const Projects = () => {
@@ -112,10 +112,11 @@ const Projects = () => {
                     >
                       <span
                         className={`
-                          flex items-center px-4 py-2 rounded-lg border transition-colors
+                          flex items-center px-4 py-2 rounded-lg border transition-all duration-300
                           border-transparent bg-black text-white
                           dark:border-gray-300 dark:bg-white dark:text-black
-                          hover:shadow-md
+                          hover:shadow-lg hover:scale-105 hover:bg-gray-900
+                          dark:hover:bg-gray-100
                         `}
                         style={{
                           minWidth: 160,
@@ -148,10 +149,18 @@ const Projects = () => {
                       href={project.websiteLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
+                      className="inline-flex items-center px-4 py-2 rounded-lg border transition-all duration-300
+                        bg-white text-gray-700 border-gray-200
+                        dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700
+                        hover:shadow-lg hover:scale-105 hover:bg-gray-50
+                        dark:hover:bg-gray-700"
+                      style={{
+                        minWidth: 120,
+                        minHeight: 48,
+                      }}
                     >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Website
+                      <Globe className="w-5 h-5 mr-2" />
+                      <span className="font-medium">Website</span>
                     </a>
                   )}
                 </div>

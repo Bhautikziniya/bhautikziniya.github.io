@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 import LeetCode from './components/LeetCode';
+import Education from './components/Education';
 
 function App() {
   useEffect(() => {
@@ -50,14 +51,17 @@ function App() {
     <ThemeProvider>
       <div className="min-h-screen bg-white dark:bg-gray-900">
         <Navbar />
-        <Hero />
-        <About />
-        <Timeline />
-        <Skills />
-        <Projects />
-        <Certifications />
-        <LeetCode />
-        <Contact />
+        <main>
+          <Hero />
+          <About />
+          <Timeline />
+          <Education />
+          <Skills />
+          <Projects />
+          <Certifications />
+          <LeetCode />
+          <Contact />
+        </main>
         <Footer />
       </div>
     </ThemeProvider>

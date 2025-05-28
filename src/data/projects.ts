@@ -8,12 +8,16 @@ interface Project {
   websiteLink?: string;
 }
 
+import attendanceHub from '../assets/ProjectsHeader/1.png';
+import attendancePunch from '../assets/ProjectsHeader/2.png';
+import mrsprotal from '../assets/ProjectsHeader/3.png';
+
 export const projects: Project[] = [
   {
     id: "rockeye-attendance-hub",
     title: "ROCKEYE Attendance Hub",
     description: "A comprehensive attendance management solution tracking employee productivity, attendance, and visitor management. Features real-time location tracking, detailed attendance summaries, visitor management, and employee movement tracking with photo verification.",
-    image: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: attendanceHub,
     tags: ["Swift", "Core Location", "Core Data", "MapKit", "Camera API"],
     appStoreLink: "https://apps.apple.com/in/app/rockeye-attendance-hub/id6471335195"
   },
@@ -21,7 +25,7 @@ export const projects: Project[] = [
     id: "rockeye-attendance-punch",
     title: "ROCKEYE Attendance Punch",
     description: "A streamlined employee attendance app with visitor management capabilities. Enables easy punch-in/out functionality and comprehensive visitor tracking with detailed information management.",
-    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: attendancePunch,
     tags: ["Swift", "Core Location", "UIKit", "Core Data"],
     appStoreLink: "https://apps.apple.com/in/app/rockeye-attendance-punch/id6468650075"
   },
@@ -29,7 +33,8 @@ export const projects: Project[] = [
     id: "mrs-portal",
     title: "MRS Portal",
     description: "A comprehensive business management app enabling online registration, price checking, order placement, loading ticket creation, delivery scheduling, and more. Streamlines operations with real-time updates and digital documentation.",
-    image: "https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    // image: "https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: mrsprotal,
     tags: ["Swift", "Core Data", "PDF Kit", "Network"],
     appStoreLink: "https://apps.apple.com/us/app/mrs-portal/id1451053466"
   },
@@ -45,7 +50,7 @@ export const projects: Project[] = [
     id: "rockeye-transporter",
     title: "Rockeye Transporter",
     description: "Rockeye Transporter is an ultimate app for managing your transportation business with ease and efficiency. Whether you're a fleet owner, logistics manager, or a truck driver, our comprehensive platform has you covered. Say goodbye to the hassle of paperwork and hello to streamlined operations. Features include intuitive trip creation with real-time traffic updates, route optimization, and comprehensive fleet management with driver assignment and performance tracking.",
-    image: "https://images.pexels.com/photos/7648467/pexels-photo-7648467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "https://images.pexels.com/photos/28757525/pexels-photo-28757525/free-photo-of-green-tanker-truck-in-amsterdam-street-scene.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     tags: ["Swift", "MapKit", "Core Location", "Push Notifications", "Core Data"],
     appStoreLink: "https://apps.apple.com/us/app/rockeye-transporter/id6468956066"
   },
@@ -76,14 +81,14 @@ export const projects: Project[] = [
     id: "notepad-sticky-notes",
     title: "Notepad + Sticky Notes (Mac App)",
     description: "Simple text editor. No formatting, no styles, no headaches. Supports .TXT, CSV, .XML and more! Jot down your thoughts quickly, and autosave the content! Customize the app's transparency according to your needs! See the other open windows underneath. Stick your notes on top of all windows! Seven colors to choose from, Notepad has never been more colorful! The counters update instantly as you type! No Loading Screens or lag, opens immediately.",
-    image: "https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "https://images.pexels.com/photos/9743045/pexels-photo-9743045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     tags: ["Swift", "AppKit", "Text Editor", "Notes", "macOS Development"]
   },
   {
     id: "baps-vachnamruts",
     title: "BAPS Swaminarayan - Vachnamruts",
     description: "A comprehensive study app featuring 273 spiritual discourses with illuminating analogies, metaphors, and divine revelations. Includes easy-to-understand notes and explanations, making ancient wisdom accessible through modern technology.",
-    image: "https://images.pexels.com/photos/5726706/pexels-photo-5726706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "https://images.pexels.com/photos/5729118/pexels-photo-5729118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     tags: ["Swift", "Core Text", "Core Data", "Search Kit"],
     appStoreLink: "https://apps.apple.com/in/app/vachanamrut-study-app/id482931473"
   },
@@ -123,8 +128,7 @@ export const projects: Project[] = [
     title: "Athlete Rocket",
     description: "An innovative video analysis platform connecting athletes with expert coaches worldwide. Athletes can submit performance videos for professional review and receive detailed feedback, creating a global coaching marketplace.",
     image: "https://images.pexels.com/photos/4761792/pexels-photo-4761792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["Swift", "AVFoundation", "Core Video", "Firebase"],
-    websiteLink: "http://athleterocket.com"
+    tags: ["Swift", "AVFoundation", "Core Video", "Firebase"]
   },
   {
     id: "taskchat",

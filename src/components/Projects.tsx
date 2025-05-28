@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ExternalLink, Globe } from 'lucide-react';
 import { projects } from '../data/projects';
+import attendanceHub from '../assets/ProjectsHeader/Attendance-Management-Project-Header.png';
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);

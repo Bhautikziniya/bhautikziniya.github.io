@@ -29,6 +29,9 @@ const awards = [
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-6 dark:text-white">
           Awards
         </h2>
+        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 dark:text-gray-400">
+          Recognition and achievements that highlight my contributions and excellence in various fields.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {awards.map((award, idx) => (
             <div

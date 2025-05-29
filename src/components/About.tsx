@@ -29,9 +29,12 @@ const About = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12 dark:text-white">
-            Some words about me
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-6 dark:text-white">
+            About Me
           </h2>
+          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 dark:text-gray-400">
+            Get to know more about my background, experience, and what drives me as a software engineer.
+          </p>
           
           <div 
             className={`transition-all duration-1000 ease-out transform ${

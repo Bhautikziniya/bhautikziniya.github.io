@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 import LeetCode from './components/LeetCode';
 import Education from './components/Education';
+import Award from './components/Award';
 
 function App() {
   useEffect(() => {
@@ -60,6 +61,7 @@ function App() {
           <Projects />
           <Certifications />
           <LeetCode />
+          <Award />
           <Contact />
         </main>
         <Footer />

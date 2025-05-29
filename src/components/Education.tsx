@@ -61,7 +61,7 @@ const Education = () => {
                       {edu.location} | {edu.period}
                     </div>
                     
-                    {edu.description && (
+                    {/* {edu.description && (
                       <ul className="space-y-2">
                         {edu.description.map((item, i) => (
                           <li key={i} className="flex items-start">
@@ -70,7 +70,7 @@ const Education = () => {
                           </li>
                         ))}
                       </ul>
-                    )}
+                    )} */}
                   </div>
                 </div>
               </div>

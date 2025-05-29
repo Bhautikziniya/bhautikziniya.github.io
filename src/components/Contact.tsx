@@ -78,7 +78,7 @@ const Contact = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-6 dark:text-white">
-          Get In Touch
+          Let's Get In Touch
         </h2>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 dark:text-gray-400">
           Have a project in mind or want to discuss opportunities? I'd love to hear from you.

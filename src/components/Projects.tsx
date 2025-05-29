@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ExternalLink, Globe } from 'lucide-react';
 import { projects } from '../data/projects';
-import attendanceHub from '../assets/ProjectsHeader/Attendance-Management-Project-Header.png';
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,7 +38,7 @@ const Projects = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-6 dark:text-white">
-          Portfolio
+          Things I've Built
         </h2>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 dark:text-gray-400">
           A comprehensive showcase of my iOS development work, featuring applications available on the App Store.

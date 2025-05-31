@@ -12,13 +12,6 @@ interface Certification {
 
 const certifications: Certification[] = [
   {
-    title: "Career Essentials in Generative AI",
-    issuer: "Microsoft and LinkedIn",
-    date: "Mar 2024",
-    certificateUrl: "https://www.linkedin.com/learning/certificates/c45bfc5eb026216564187ab6b68fad0bdbc6cde2b51ed1fca7984a7f5bc2f399",
-    skills: ["Computer Ethics", "Artificial Intelligence for Business", "Generative AI", "Prompt Engineering"]
-  },
-  {
     title: "Cert Prep: Scrum Master",
     issuer: "LinkedIn & PMI®",
     date: "Mar 2024",
@@ -28,9 +21,16 @@ const certifications: Certification[] = [
   {
     title: "Scrum Foundation Professional Certificate - SFPC™",
     issuer: "CertiProf®",
-    date: "Jan 2024",
+    date: "Mar 2024",
     certificateUrl: "https://www.credly.com/badges/97f66e14-b916-42fe-950e-f6152d3172e2/public_url",
     skills: ["Agile", "Agile Mindset", "Agile Practices", "Agile Teams", "Scrum", "Scrum Artefacts", "Scrum EventSource", "Scrum Roles", "Scrum Theory"]
+  },
+  {
+    title: "Career Essentials in Generative AI",
+    issuer: "Microsoft and LinkedIn",
+    date: "Jan 2024",
+    certificateUrl: "https://www.linkedin.com/learning/certificates/c45bfc5eb026216564187ab6b68fad0bdbc6cde2b51ed1fca7984a7f5bc2f399",
+    skills: ["Computer Ethics", "Artificial Intelligence for Business", "Generative AI", "Prompt Engineering"]
   }
 ];
 

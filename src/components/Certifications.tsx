@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Award, ExternalLink } from 'lucide-react';
 import badge from '../assets/certiprof-scrum-foundation-badge.png';
+import dsaCertificateUrl from '../assets/Bhautik Ziniya DSA & System Design Certificate.pdf';
 
 interface Certification {
   title: string;
@@ -11,6 +12,13 @@ interface Certification {
 }
 
 const certifications: Certification[] = [
+  {
+    title: "DSA & System Design",
+    issuer: "HeyCoach",
+    date: "Jun 2025",
+    certificateUrl: dsaCertificateUrl,
+    skills: ["DSA", "System Design"]
+  },
   {
     title: "Cert Prep: Scrum Master",
     issuer: "LinkedIn & PMI®",

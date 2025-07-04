@@ -72,13 +72,11 @@ const Hero = () => {
               href={resume}
               download
               onClick={() => {
-                if (window.gtag) {
-                  window.gtag('event', 'resume_download', {
-                    event_category: 'Resume',
-                    event_label: 'Bhautik Ziniya CV',
-                    value: 1,
-                  });
-                }
+                (window as any).gtag?.('event', 'resume_download', {
+                  event_category: 'Resume',
+                  event_label: 'Bhautik Ziniya CV',
+                  value: 1,
+                });
               }}
               className="px-6 py-3 bg-white text-blue-600 font-medium rounded-lg border border-blue-600 hover:bg-blue-50 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-400 dark:hover:bg-gray-700"
             >

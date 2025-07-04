@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Award, ExternalLink } from 'lucide-react';
+import { Award } from 'lucide-react';
 import badge from '../assets/certiprof-scrum-foundation-badge.png';
 import dsaCertificateUrl from '../assets/Bhautik Ziniya DSA & System Design Certificate.pdf';
 

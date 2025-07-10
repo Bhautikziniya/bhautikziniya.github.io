@@ -1,4 +1,10 @@
 import React, { useEffect } from 'react';
+// 👇 Add this block
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -36,6 +42,16 @@ function App() {
               top: sectionTop,
               behavior: 'smooth'
             });
+
+            // Fire manual GA4 event
+            if (window.gtag) {
+              const sectionName = href.replace('#', '');
+              window.gtag('event', 'page_view', {
+                page_path: href,
+                page_title: sectionName,
+                screen_class: 'Portfolio'
+              });
+            }
           }
         }
       }
@@ -43,8 +59,46 @@ function App() {
     
     document.addEventListener('click', handleLinkClick);
     
+    // --- STEP 2: Scroll-based tracking with IntersectionObserver ---
+    const sectionIds = [
+      'hero',
+      'about',
+      'timeline',
+      'education',
+      'skills',
+      'projects',
+      'certifications',
+      'leetcode',
+      'award',
+      'contact'
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && window.gtag) {
+            const sectionId = entry.target.id;
+            window.gtag('event', 'page_view', {
+              page_path: `/${sectionId}`,
+              page_title: sectionId,
+              screen_class: 'Portfolio'
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.6
+      }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
     return () => {
       document.removeEventListener('click', handleLinkClick);
+      observer.disconnect();
     };
   }, []);
 
@@ -53,16 +107,16 @@ function App() {
       <div className="min-h-screen bg-white dark:bg-gray-900">
         <Navbar />
         <main>
-          <Hero />
-          <About />
-          <Timeline />
-          <Education />
-          <Skills />
-          <Projects />
-          <Certifications />
-          <LeetCode />
-          <Award />
-          <Contact />
+          <section id="hero"><Hero /></section>
+          <section id="about"><About /></section>
+          <section id="timeline"><Timeline /></section>
+          <section id="education"><Education /></section>
+          <section id="skills"><Skills /></section>
+          <section id="projects"><Projects /></section>
+          <section id="certifications"><Certifications /></section>
+          <section id="leetcode"><LeetCode /></section>
+          <section id="award"><Award /></section>
+          <section id="contact"><Contact /></section>
         </main>
         <Footer />
       </div>

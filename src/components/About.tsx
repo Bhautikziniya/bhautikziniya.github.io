@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronRight } from 'lucide-react';
-const bhautikImage = "https://drive.google.com/uc?export=view&id=17GsEVoGKV2bsurxFk3uDSUpIqsBAjK8N";
+import bhautikImage from '../assets/bhautik.png';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
